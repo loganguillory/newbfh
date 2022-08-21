@@ -46,7 +46,7 @@ function App() {
     fetch("/items")
     .then(r => r.json())
     .then((data) =>{
-   setItems(data)
+    setItems(data)
     })
   }, [])
 
@@ -60,7 +60,7 @@ function App() {
           <Route path="/" element={<HomePage />}></Route>
           <Route
             path="/designers"
-            element={<Designers creators={creators} />}
+            element={<Designers key={creators.id} creators={creators} />}
           ></Route>
           <Route path="/shop" element={<Dom key={items.id} items={items}/>}></Route>
           <Route
