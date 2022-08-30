@@ -2,17 +2,22 @@ import logo from "./Images/logo.png";
 import { useNavigate } from "react-router-dom";
 import React from "react";
 
-function NavBar({ user }) {
+function NavBar({ user, setUser }) {
+
   const navigate = useNavigate();
 
   function handleLogOut() {
-    console.log('hello')
-    fetch("/logout", { method: "DELETE" }).then(
+    console.log('Logging Out')
+    fetch("/logout", { method: "DELETE" })
+    .then(()=> (setUser(user.username="")))
+    .then(
       setTimeout(() => {
         navigate("/");
       }, 1000)
     );
   }
+
+  
 
   return (
     <nav className="top-0 z-50 sticky bg-white">
@@ -21,12 +26,21 @@ function NavBar({ user }) {
           <a href="/">
             <img className="h-14" src={logo} />
           </a>
+          <br></br>
+          <br></br>
+          <div className="">
+          <h1>
+              <strong>{user.username ? `Welcome, ${user.full_name} !`: console.log("Not Logged In")}</strong>
+          </h1>
+          </div>
+          
         </div>
         <div className="flex justify-between mt-10 w-full max-w-3xl pb-6 cursor-pointer">
+          <a href="about">About</a>
+          <a href="community">Community</a>
           <a href="/designers">Designers</a>
           <a href="/shop">Shop</a>
-          <a href="favorites">Favorites</a>
-          <a href="cart">Shopping Cart</a>
+          {user.username ?  <a href="cart">Shopping Cart</a> : console.log("not user")}
           <a href="login"> Log In</a>
           <button onClick={handleLogOut}>Log Out</button>
         </div>

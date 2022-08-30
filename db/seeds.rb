@@ -122,16 +122,16 @@ f6 = Favorite.create(user: u2, designer: d45)
 
 
 puts "creating Items..."
-i1 = Item.create!(item_name:"House of Aama x Gianni Lee Studio", price: 950.00, description: "Sea Spirit Button Up Shirt", in_stock: true, designer: d4)
-i2 = Item.create(item_name:"House of Aama x Gianni Lee Studio", price: 350.00, description: "Sea Spirit Silk Sarong", in_stock: true, designer: d4)
-i3 = Item.create(item_name:"House of Aama x Gianni Lee Studio", price: 390.00, description: "Sea Spirit Turtleneck" , in_stock: true, designer: d4)
-i4 = Item.create(item_name:"House of Aama x Gianni Lee Studio" , price:220.00, description: "Sea Spirit Silk Scarf", in_stock: true, designer: d4)
-i5 = Item.create(item_name:"Brandon Blackwood", price:375.00, description:"Bamboo B Tote", in_stock: true, designer: d14)
-i6 = Item.create(item_name:"Brandon Blackwood" , price:375.00 , description:"Bamboo B Tote" , in_stock: false, designer: d14)
-i7 = Item.create(item_name:"BFH Mag", price: 95.00, description:"Black Fashion House Volume 0: SEEN (Special Edition)", in_stock: true, designer: d92)
-i8 = Item.create(item_name:"BFH Mag", price: 95.00, description:"Black Fashion House Volume 0: SEEN (Limited Edition Pyer Mosss)", in_stock: true, designer: d92)
-i9 = Item.create(item_name:"BFH Mag", price: 95.00, description:"Black Fashion House Volume 0: SEEN (Limited Edition Theophilio)", in_stock: false, designer: d92)
-i10 = Item.create(item_name:"BFH Mag", price: 95.00, description: "Black Fashion House Volume 0: SEEN (Limited Edition Sergio Hudson)", in_stock: false, designer: d92)
+i1 = Item.create!(item_name:"House of Aama x Gianni Lee Studio", price: 950.00, description: "Sea Spirit Button Up Shirt", in_stock: true, designer: d4, user_id: u2, image:"https://images.squarespace-cdn.com/content/v1/5f45761416df49513f4308c6/1654453704052-MXLZYUNQ8ASPIKR7QO0D/HOA004.jpg?format=750w")
+i2 = Item.create(item_name:"House of Aama x Gianni Lee Studio", price: 350.00, description: "Sea Spirit Silk Sarong", in_stock: true, designer: d4, user_id: u3, image:"https://images.squarespace-cdn.com/content/v1/5f45761416df49513f4308c6/1657375316210-NW6XKVJVVYNQPS6GQGZI/HOA+001.jpg?format=300w")
+i3 = Item.create(item_name:"House of Aama x Gianni Lee Studio", price: 390.00, description: "Sea Spirit Turtleneck" , in_stock: true, designer: d4, user_id: u2, image:"https://images.squarespace-cdn.com/content/v1/5f45761416df49513f4308c6/1657375455787-MDZ6JAMKNVF86THNQ54V/HOA006.jpg?format=750w")
+i4 = Item.create(item_name:"House of Aama x Gianni Lee Studio" , price:220.00, description: "Sea Spirit Silk Scarf", in_stock: true, designer: d4, user_id: u3, image:"https://images.squarespace-cdn.com/content/v1/5f45761416df49513f4308c6/1657376921704-9IVHRS3U1I8T1XNFFFY6/HOAS2.jpg?format=300w")
+i5 = Item.create(item_name:"Brandon Blackwood", price:375.00, description:"Bamboo B Tote", in_stock: true, designer: d14, user_id: u3, image:"https://images.squarespace-cdn.com/content/v1/5f45761416df49513f4308c6/1649220355459-SSVGFASN2DD4ACPXQ297/BBWOODBLACKBB2.jpg?format=750w")
+i6 = Item.create(item_name:"Brandon Blackwood" , price:375.00 , description:"Bamboo B Tote" , in_stock: false, designer: d14, user_id: u2, image:"https://images.squarespace-cdn.com/content/v1/5f45761416df49513f4308c6/1649220455154-2ESYLFKCDN5RZ33CXNOA/BBAMBOOBLACK.jpg?format=750w")
+i7 = Item.create(item_name:"BFH Mag", price: 95.00, description:"Black Fashion House Volume 0: SEEN (Special Edition)", in_stock: true, designer: d92, user_id: u2, image:"https://images.squarespace-cdn.com/content/v1/5f45761416df49513f4308c6/1648784843631-33H0IC9QUBF3GHXVUU3P/BFFV0AMBER.jpg?format=750w")
+i8 = Item.create(item_name:"BFH Mag", price: 95.00, description:"Black Fashion House Volume 0: SEEN (Limited Edition Pyer Mosss)", in_stock: true, designer: d92, user_id: u2, image:"https://images.squarespace-cdn.com/content/v1/5f45761416df49513f4308c6/1648785010999-BE6IKKUNIMOI578008QJ/BFFV0ABDMPM.jpg?format=750w")
+i9 = Item.create(item_name:"BFH Mag", price: 95.00, description:"Black Fashion House Volume 0: SEEN (Limited Edition Theophilio)", in_stock: false, designer: d92, user_id: u3, image:"https://images.squarespace-cdn.com/content/v1/5f45761416df49513f4308c6/1648817291553-I4GSPPSS05QYTU48SJ7P/BFFV0QUILLEMONS.jpg?format=750w")
+i10 = Item.create(item_name:"BFH Mag", price: 95.00, description: "Black Fashion House Volume 0: SEEN (Limited Edition Sergio Hudson)", in_stock: false, designer: d92, user_id: u2, image:"https://images.squarespace-cdn.com/content/v1/5f45761416df49513f4308c6/1648785075767-WGZOU6X6TPWIPT2PKQYD/BFFV0ABDMSH.jpg?format=750w")
 
 
 

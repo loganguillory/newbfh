@@ -1,6 +1,6 @@
 class ItemsController < ApplicationController
   before_action :set_item, only: %i[ show update destroy ]
-  skip_before_action :authorize, only: [:show, :index]
+  skip_before_action :authorize, only: [:show, :create, :index]
 
   # GET /items
   def index
@@ -17,13 +17,14 @@ class ItemsController < ApplicationController
 
   # POST /items
   def create
-    @item = Item.new(item_params)
+    @item = Item.create!(item_params)
+    render json: @item, status: :created
 
-    if @item.save
-      render json: @item, status: :created
-    else
-      render json: @item.errors, status: :unprocessable_entity
-    end
+    # if @item
+    #   render json: @item, status: :created
+    # else
+    #   render json: @item.errors, status: :unprocessable_entity
+    # end
   end
 
   # PATCH/PUT /items/1
@@ -37,7 +38,11 @@ class ItemsController < ApplicationController
 
   # DELETE /items/1
   def destroy
+    # @item = Item.find(params[:id])
     @item.destroy
+    render json: @item
+
+
   end
 
   private
@@ -46,8 +51,12 @@ class ItemsController < ApplicationController
       @item = Item.find(params[:id])
     end
 
+    # def newParams
+    #   params.permit(:item_name, :price, description, :item_image)
+    # end
+
     # Only allow a list of trusted parameters through.
     def item_params
-      params.permit(:item_name, :price, :description, :in_stock, :designer_id)
+      params.permit(:item_name, :price, :description, :in_stock, :designer_id, :image)
     end
 end

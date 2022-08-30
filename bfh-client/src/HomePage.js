@@ -1,8 +1,12 @@
 import bblackwood from "./Images/bblackwood.png";
 import nycladies from "./Images/nycladies.png";
 import React from 'react';
-
-function HomePage() {
+import {useNavigate} from "react-router-dom"
+function HomePage({handleDiscover}) {
+  let navigate = useNavigate()
+  function handleDiscover(){
+    navigate("/shop")
+  }
   return (
     <div>
       <div className="max-w-3xl mr-auto ml-auto">
@@ -27,7 +31,7 @@ function HomePage() {
         </div>
 
         <div className="pb-10 mb-20 bg-black w-2/12 h-10 text-center ml-auto mr-auto">
-          <button className="text-white translate-y-2 font-sans uppercase text-xs font-bold">Discover More</button>
+          <button className="text-white translate-y-2 font-sans uppercase text-xs font-bold" onClick={() => {handleDiscover()}}>Discover More</button>
         </div>
       </div>
     </div>
