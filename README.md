@@ -1,24 +1,21 @@
 # README
+Black Fashion House is a Ecommerce and Evolving data base showcasing Black Designers and Black owned brands from all around the world. 
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+In the project directory, you can run:
 
-Things you may want to cover:
+npm start
+Runs the app in the development mode.
+Open http://localhost:3000 to view it in your browser.
 
-* Ruby version
+The page will reload when you make changes.
+You may also see any lint errors in the console.
 
-* System dependencies
+npm test
+Launches the test runner in the interactive watch mode.
+See the section about running tests for more information.
 
-* Configuration
+The backend was ran with Ruby on Rails
 
-* Database creation
+Bundle Install to install dependencies
+Rails s to start the database server
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
